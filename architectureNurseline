@@ -2,145 +2,171 @@
 #include <vector>
 #include <string>
 
-// User class
-class User {
+//User class is defined with methods (login(), logout(), requestConsultation()) and attributes (userID, username, password). These techniques mimic common user actions.
+class User 
+{
 public:
     int userID;
     std::string username;
     std::string password;
 
-    // Methods
-    void login() {
-        // Implementation for user login
-        std::cout << "User logged in." << std::endl;
+    //method for logging in/out
+    void login() 
+    {
+        //implementation for user login
+        std::cout << "The user logged in." << std::endl;
     }
 
-    void logout() {
+    void logout() 
+    {
         // Implementation for user logout
-        std::cout << "User logged out." << std::endl;
+        std::cout << "The user logged out." << std::endl;
     }
 
-    void requestConsultation() {
-        // Implementation for requesting a consultation
+    void requestConsultation() 
+    {
+        //implementation for requesting a consultation
         std::cout << "Consultation requested." << std::endl;
     }
 };
 
-// Nurse class
-class Nurse {
+//Nurse class shows nurse entities using procedures (checkAvailability(), conductConsultation()) and attributes (nurseID, name, availability).
+class Nurse 
+{
 public:
     int nurseID;
     std::string name;
     bool availability;
 
-    // Methods
-    void checkAvailability() {
-        // Implementation for checking nurse availability
+    //Methods
+    void checkAvailability() 
+    {
+        //Implementation for checking nurse availability
         std::cout << (availability ? "Nurse is available." : "Nurse is not available.") << std::endl;
     }
 
-    void conductConsultation() {
-        // Implementation for conducting a consultation
-        std::cout << "Consultation conducted." << std::endl;
+    void conductConsultation() 
+    {
+        //Implementation for conducting a consultation
+        std::cout << "Consultation is conducted." << std::endl;
     }
 };
 
-// TelehealthSystem class
-class TelehealthSystem {
+//TelehealthSystem class maintains lists of nurses and users, offers ways to add nurses and users, and allows appointment scheduling.
+class TelehealthSystem 
+{
 public:
     std::vector<User> userList;
     std::vector<Nurse> nurseList;
-    // Additional attributes and methods can be added
+    //Additional attributes and methods can be added
 
-    // Methods
-    void addUser(const User& user) {
-        // Implementation for adding a user
+    //Methods
+    void addUser(const User& user) 
+    {
+        //Implementation for adding a user
         userList.push_back(user);
         std::cout << "User added to the system." << std::endl;
     }
 
-    void addNurse(const Nurse& nurse) {
-        // Implementation for adding a nurse
+    void addNurse(const Nurse& nurse) 
+    {
+        //Implementation for adding a nurse
         nurseList.push_back(nurse);
         std::cout << "Nurse added to the system." << std::endl;
     }
 
-    void scheduleAppointment() {
-        // Implementation for scheduling an appointment
-        std::cout << "Appointment scheduled." << std::endl;
+    void scheduleAppointment() 
+    {
+        //Implementation for scheduling an appointment
+        std::cout << "Appointment is scheduled." << std::endl;
     }
 };
 
-// CommunicationModule class
-class CommunicationModule {
+//CommunicationModule class manages communication standards and offers ways to make and receive phone calls and text messages.
+class CommunicationModule 
+{
 public:
     // Methods
-    void initiateCall() {
-        // Implementation for initiating a call
+    void initiateCall() 
+    {
+        //Implementation for initiating a call
         std::cout << "Call initiated." << std::endl;
     }
 
-    void sendTextMessage() {
-        // Implementation for sending a text message
+    void sendTextMessage() 
+    {
+        //Implementation for sending a text message
         std::cout << "Text message sent." << std::endl;
     }
 };
 
-// NotificationService class
-class NotificationService {
+//NotificationService class controls the systems used to send reminders and notifications
+class NotificationService 
+{
 public:
     // Methods
-    void sendNotification() {
+    void sendNotification() 
+    {
         // Implementation for sending a notification
         std::cout << "Notification sent." << std::endl;
     }
 
-    void setReminder() {
-        // Implementation for setting a reminder
+    void setReminder() 
+    {
+        //Implementation for setting a reminder
         std::cout << "Reminder set." << std::endl;
     }
 };
 
-// Database class
-class Database {
+//Database class provides ways to save appointment, nurse, and user data.
+class Database 
+{
 public:
-    // Methods
-    void saveUserData(const User& user) {
-        // Implementation for saving user data
+    //Methods
+    void saveUserData(const User& user) 
+    {
+        //Implementation for saving user data
         std::cout << "User data saved." << std::endl;
     }
 
-    void saveNurseData(const Nurse& nurse) {
-        // Implementation for saving nurse data
-        std::cout << "Nurse data saved." << std::endl;
+    void saveNurseData(const Nurse& nurse) 
+    {
+        //Implementation for saving nurse data
+        std::cout << "Nurse data is saved." << std::endl;
     }
 
-    void saveAppointmentData() {
-        // Implementation for saving appointment data
-        std::cout << "Appointment data saved." << std::endl;
+    void saveAppointmentData() 
+    {
+        //Implementation for saving appointment data
+        std::cout << "Appointment data is saved." << std::endl;
     }
 };
 
-// SecurityModule class
-class SecurityModule {
+//SecurityModule provides methods of user authentication and data encryption.
+class SecurityModule 
+{
 public:
     // Methods
-    void encryptData() {
-        // Implementation for encrypting data
+    void encryptData() 
+    {
+        //Implementation for encrypting data
         std::cout << "Data encrypted." << std::endl;
     }
 
-    void authenticateUser() {
-        // Implementation for authenticating a user
+    void authenticateUser() 
+    {
+        //Implementation for authenticating a user
         std::cout << "User authenticated." << std::endl;
     }
 };
 
-// ExternalSystem class
-class ExternalSystem {
+//ExternalSystem offers ways to integrate with third-party systems, like billing and electronic health records (EHR).
+class ExternalSystem 
+{
 public:
     // Methods
-    void integrateWithEHR() {
+    void integrateWithEHR() 
+    {
         // Implementation for integrating with EHR
         std::cout << "Integrated with EHR." << std::endl;
     }
@@ -151,23 +177,27 @@ public:
     }
 };
 
-// AnalyticsModule class
-class AnalyticsModule {
+//AnalyticsModule manages methods for collecting data
+class AnalyticsModule 
+{
 public:
     // Methods
-    void collectData() {
-        // Implementation for collecting data
-        std::cout << "Data collected." << std::endl;
+    void collectData() 
+    {
+        //Implementation for collecting data
+        std::cout << "Data is collected." << std::endl;
     }
 
-    void analyzeData() {
-        // Implementation for analyzing data
-        std::cout << "Data analyzed." << std::endl;
+    void analyzeData() 
+    {
+        //Implementation for analyzing data
+        std::cout << "Data is analyzed." << std::endl;
     }
 };
 
-int main() {
-    // Example usage of the classes and methods
+int main() 
+{
+    //Example usage of the classes and methods
     User user;
     user.userID = 1;
     user.username = "john_doe";
@@ -175,7 +205,7 @@ int main() {
 
     Nurse nurse;
     nurse.nurseID = 101;
-    nurse.name = "Nurse Smith";
+    nurse.name = "Nurse Clare";
     nurse.availability = true;
 
     TelehealthSystem telehealthSystem;

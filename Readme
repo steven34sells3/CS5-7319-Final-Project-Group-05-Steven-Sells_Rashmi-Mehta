@@ -53,3 +53,38 @@ To use this telehealth system implementation, follow these steps:
 Clone the repository: git clone <repository_url>
 Compile the program: g++ main.cpp -o telehealth_system
 Run the executable: ./telehealth_system
+
+Complier tool: CLion C++
+
+Difference between the architecture designs for both
+candidate architecture styles and the rationales for your 
+final selection:
+
+Option 1 for Architecture: Layered Architecture
+Layered Structure: The application is separated into logical sections for data storage, presentation, and business logic.
+Communication: Most of the time, information is shared vertically between levels, such as from display to data storage to business logic.
+Monolithic: Frequently connected with programs that have a single, closely tied component.
+Scalability: Replicating the entire monolith is typically required for scaling, which could result in problems.
+
+Option 2 for Architecture: Microservices
+Decentralization: The program is separated into separate, loosely connected services that speak to each other using APIs.
+Autonomy: By allowing for independent development, deployment, and scaling of each microservice, autonomy fosters agility.
+Scalability: Facilitates the demand-driven, targeted scaling of particular services, hence optimizing resource use.
+Technology Diversity: To promote flexibility, each microservice can be constructed utilizing a variety of technologies.
+
+The choice between a layered or microservices architecture will rely on the particular requirements and objectives of your project, 
+taking into account elements such as project size, team experience, scalability needs, and the required degree of flexibility and agility. 
+It's also important to remember that, depending on the use case, hybrid approaches—which combine elements of both architectures 
+may be effective. At the end, we determined that an Microservices​ would be better. 
+
+Rationales for the Final Decision:
+1. Project Complexity and Size: Layered Architecture: Fits smaller projects with easier specifications.
+Microservices Architecture: Better suited for more extensive, intricate applications with a wide range of features.
+2. Specifications for Scalability:
+Layered Architecture: Usually scales the entire monolith, with few options for scalability.
+Better scalability possibilities are offered by the microservices architecture, which allows for selective service scaling.
+3. Development Team Specialization: Layered Architecture: This option is appropriate if the team has a greater 
+background in conventional monolithic systems.
+4. Flexibility and Agility:
+Layered Architecture: Easy to use, but might not have the adaptability needed in quickly changing contexts.
+Microservices Architecture: Provides more flexibility and agility for the independent evolution and scalability of components.

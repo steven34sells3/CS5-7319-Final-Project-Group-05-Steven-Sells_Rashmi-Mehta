@@ -54,7 +54,7 @@ Clone the repository: git clone <repository_url>
 Compile the program: g++ main.cpp -o telehealth_system
 Run the executable: ./telehealth_system
 
-Complier tool: CLion C++
+Complier tool: CLion C++17
 
 Difference between the architecture designs for both
 candidate architecture styles and the rationales for your 
